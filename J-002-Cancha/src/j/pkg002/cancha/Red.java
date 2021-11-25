@@ -24,5 +24,4 @@ public class Red {
     public double probNo(int posCielo, int posViento, int posTemperatura, int posHumedad){
         return Double.parseDouble(this.juega[3])*Double.parseDouble(this.cieloNo[posCielo])*Double.parseDouble(this.vientoNo[posViento])*Double.parseDouble(this.temperaturaNo[posTemperatura])*Double.parseDouble(this.humedadNo[posHumedad]); 
     }
-    public 
 }
