@@ -18,4 +18,11 @@ public class Red {
         this.humedadSi = new String[]{"Alta","0.35","Normal","0.650"};
         this.humedadNo = new String[]{"Alta","0.75","Normal","0.250"};
     }
+    public double probSi(int posCielo, int posViento, int posTemperatura, int posHumedad){
+        return Double.parseDouble(this.juega[1])*Double.parseDouble(this.cieloSi[posCielo])*Double.parseDouble(this.vientoSi[posViento])*Double.parseDouble(this.temperaturaSi[posTemperatura])*Double.parseDouble(this.humedadSi[posHumedad]); 
+    }
+    public double probNo(int posCielo, int posViento, int posTemperatura, int posHumedad){
+        return Double.parseDouble(this.juega[3])*Double.parseDouble(this.cieloNo[posCielo])*Double.parseDouble(this.vientoNo[posViento])*Double.parseDouble(this.temperaturaNo[posTemperatura])*Double.parseDouble(this.humedadNo[posHumedad]); 
+    }
+    public 
 }
