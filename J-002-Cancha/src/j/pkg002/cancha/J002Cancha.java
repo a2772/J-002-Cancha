@@ -10,8 +10,8 @@ public class J002Cancha {
         String viento = JOptionPane.showInputDialog("--Viento--\n1) Verdadero\n3) Falso");
         String humedad = JOptionPane.showInputDialog("--Humedad--\n1) Alta\n3) Normal ");
         
-        double probSi = 0;
-        double probNo = 0;
+        double probSi;
+        double probNo;
         
         probSi = red.probSi(Integer.parseInt(cielo), Integer.parseInt(viento), Integer.parseInt(temperatura), Integer.parseInt(humedad));
         probNo = red.probNo(Integer.parseInt(cielo), Integer.parseInt(viento), Integer.parseInt(temperatura), Integer.parseInt(humedad));
@@ -19,9 +19,8 @@ public class J002Cancha {
         double suma = probSi + probNo;
         String resultado = "";
         resultado += "Suma de la probabilidad Si + No: " + suma + " \n\n";
-        resultado += "Probabilidad de jugar: " + probSi/suma + " = " + probSi/suma*100 + "%\n";
-        resultado += "Probabilidad de NO jugar: " + probNo/suma + " = " + probNo/suma*100 + "%\n";
-        
+        resultado += "Probabilidad de jugar: " + probSi/suma + " = " +  Math.round( (probSi/suma*100)*100d )/100d + "%\n";
+        resultado += "Probabilidad de NO jugar: " + probNo/suma + " = " + Math.round( (probNo/suma*100)*100d )/100d + "%\n";
         JOptionPane.showMessageDialog(null, resultado);
     }
 }
